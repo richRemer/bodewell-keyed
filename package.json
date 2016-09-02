@@ -1,0 +1,27 @@
+{
+  "name": "bodewell-keyed",
+  "version": "0.0.1",
+  "description": "bodewell keyed instance base class",
+  "main": "keyed.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/richRemer/bodewell-keyed.git"
+  },
+  "author": "Richard Remer <reanjr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richRemer/bodewell-keyed/issues"
+  },
+  "homepage": "https://github.com/richRemer/bodewell-keyed#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5"
+  }
+}
