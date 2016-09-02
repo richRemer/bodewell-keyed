@@ -2,11 +2,18 @@ var expect = require("expect.js"),
     sinon = require("sinon"),
     keyed = require("..");
 
-describe("keyed(function)", () => {
+describe("keyed(function, [object])", () => {
     it("should return constructor", () => {
         var Type = keyed(() => {});
         expect(Type).to.be.a("function");
-        expect(new Type()).to.be.a(Type);
+        expect(new Type("foo")).to.be.a(Type);
+    });
+
+    it("should set prototype", () => {
+        var Base = function() {},
+            Type = keyed(() => {}, Base.prototype);
+
+        expect(new Type("foo")).to.be.a(Base);
     });
 });
 

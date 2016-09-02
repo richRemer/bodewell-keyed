@@ -1,10 +1,16 @@
 /**
  * Create a keyed entity class.
  * @param {function} config
+ * @param {object} [proto]
  * @returns {function}
  */
-function keyed(config) {
+function keyed(config, proto) {
     var entities = {};
+
+    if (proto) {
+        Keyed.prototype = Object.create(proto);
+        Keyed.prototype.constructor = Keyed;
+    }
 
     function Keyed(key) {
         var args = Array.prototype.slice.call(arguments, 1),

@@ -1,6 +1,6 @@
 {
   "name": "bodewell-keyed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bodewell keyed instance base class",
   "main": "keyed.js",
   "directories": {
