@@ -45,6 +45,15 @@ function keyed(config, proto) {
     };
 
     /**
+     * Return true if the key has been loaded.
+     * @param {string} key
+     * @returns {boolean}
+     */
+    Keyed.loaded = function(key) {
+        return key in entities;
+    };
+
+    /**
      * @name Keyed#key
      * @type {string}
      * @readonly
