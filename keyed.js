@@ -54,6 +54,16 @@ function keyed(config, proto) {
     };
 
     /**
+     * Assign value to a key.
+     * @param {string} key
+     * @param {Keyed} value
+     */
+    Keyed.assign = function(key, value) {
+        if (Keyed.loaded(key)) Keyed(key).purge();
+        entities[key] = value;
+    };
+
+    /**
      * @name Keyed#key
      * @type {string}
      * @readonly

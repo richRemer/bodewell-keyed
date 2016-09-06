@@ -67,6 +67,16 @@ describe("Keyed(string, object)", () => {
         expect(foo.value).to.be(13);
     });
 
+    describe(".assign(string, Keyed)", () => {
+        it("should assign value to key", () => {
+            var Type = keyed(() => {}),
+                foo = {};
+
+            Type.assign("foo", foo);
+            expect(Type("foo")).to.be(foo);
+        });
+    });
+
     describe(".loaded(string)", () => {
         it("should return boolean indicating the key has been loaded", () => {
             var Type = keyed(() => {});
